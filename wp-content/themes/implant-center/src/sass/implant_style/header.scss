@@ -1,0 +1,224 @@
+header {
+  padding: 23px 0;
+  background: #272727;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: Min(3.333vw, 50px);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: Min(3.333vw, 50px);
+    flex-grow: 1;
+  }
+}
+
+.header-logo img {
+  object-fit: contain;
+}
+
+.nav {
+  flex-grow: 1;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-family: $font-family1 ;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.3em;
+    color: #F0F0EE;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    transition: opacity .4s;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+      .nav__link {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.header-phones__link {
+  font-family: $font-family1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  color: #F0F0EE;
+}
+
+.header-phones {
+  display: grid;
+  grid-gap: 5px;
+  padding-left: 50px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 27px;
+    background-image: url(/wp-content/themes/implant-center/img/phone.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.mobile-burger {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+
+  .sub-menu-toggle {
+    display: none;
+    
+  }
+  header {
+    position: relative;
+    z-index: 3;
+  }
+  .nav {
+      
+      
+      a:hover {
+          color: #77AC57 !important;
+      }
+      
+      
+      a {
+      font-size: 14px;
+        line-height: 120%;
+        }
+      
+
+
+    .sub-menu {
+      transition: none !important;
+      visibility: hidden;
+      position: absolute;
+      z-index: 50;
+      opacity: 0;
+      background: rgba(39, 39, 39, 0.7);
+        display: flex;
+        flex-direction: column;
+        left: -20px;
+        min-width: 220px;
+        top: 17px;
+        
+        a {
+        font-size: 13px;
+        line-height: 120%;
+        }
+        
+        .sub-menu {
+             a {
+        font-size: 12px;
+        line-height: 120%;
+        }
+        }
+        
+        
+        
+    }
+
+    &__item {
+        position: relative;
+        
+      &:hover  {
+        & > .sub-menu {
+          visibility: visible;
+            opacity: 1;
+          
+        }
+      }
+        
+    .nav__item {
+        padding: 10px 20px;
+        
+        &:not(:first-child) {
+            padding-top: 0;
+        }
+          &:hover {
+              & > .sub-menu {
+                    visibility: visible;
+                    position:absolute;
+                    top: 0;
+                    left: 0px;
+                    transform: translatex(100%);
+                    opacity: 1;
+                }
+          }
+      } 
+    }
+      
+       
+  }
+}
+
+@media (max-width: 1024px) {
+  header  .nav {
+
+    .sub-menu-toggle {
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .sub-menu-toggle {
+      font-size: 20px;
+    }
+
+    .active > .sub-menu-toggle {
+      font-size: 0;
+
+      &::before {
+        content: '-';
+        font-size: 20px;
+      }
+    }
+
+    a {
+      line-height: 120%;
+    }
+
+    &__item {
+      display: grid;
+      align-items: center;
+      justify-content: flex-start;
+      grid-template-columns: auto 20px;
+    }
+
+    .sub-menu {
+      order: 999999;
+      grid-column: 1/-1;
+      padding: 20px 20px 20px;
+
+      .nav__item:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+

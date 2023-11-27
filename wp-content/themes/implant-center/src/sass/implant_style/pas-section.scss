@@ -1,0 +1,122 @@
+.pas-section {
+  padding: 60px 0 90px;
+
+  & + & {
+    padding-top: 0;
+  }
+
+  .container {
+    max-width: 1220px;
+  }
+
+  // &__box {
+  //   margin-top: clamp(60px, 12.500vw ,180px);
+  // }
+
+  &__title {
+    font-family: $font-family1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.3em;
+    max-width: 358px;
+  }
+
+  &__box {
+    display: grid;
+    grid-gap: 24px;
+  }
+}
+
+
+.big-title {
+  font-family: $font-family1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5vw;
+  line-height: 100%;
+  letter-spacing: 1.3vw;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+}
+
+.pas-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding-bottom: clamp(20px, 3.472vw ,50px);
+  position: relative;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding-left: clamp(20px, 3.472vw ,50px);
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    width: calc(100% + 60px);
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #7e7e7e;
+
+    
+  @media (max-width: 768px) {
+    height: 110%;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 2px;
+  }
+  }
+
+  &__item {
+    font-family: $font-family1;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #272727;
+    position: relative;
+    &::before {
+      content: '';
+      background-color: #7e7e7e;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      display: flex;
+      flex-shrink: 0;
+      transform: translate(-50%, 50%);
+      bottom: calc(clamp(20px, 3.472vw, 50px) * -1);
+
+      @media (max-width: 768px) {
+        // left: 50%;
+        transform: translate(-50%, 50%);
+        bottom: 50%;
+        left: calc(clamp(20px, 3.472vw, 50px) * -1);
+      }
+    }
+  }
+}
+
+.pas-section--about {
+  padding-top: 135px;
+  .pas-section__box {
+    margin-top: 0;
+  }
+}
+
+

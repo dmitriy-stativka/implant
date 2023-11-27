@@ -1,0 +1,242 @@
+.form-section {
+  padding: 70px 0 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(39, 39, 39, 0.85);
+    content: '';
+  }
+
+  .main-top {
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    background-image: none;
+    font-family: $font-family1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.3em;
+    color: rgba(240, 240, 238, 0.63);
+  }
+
+  &__text {
+    font-family: $font-family1;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #F0F0EE;
+  }
+
+  &__box {
+    padding-top: 68px;
+    position: relative;
+
+    &:before {
+      top: 20px;
+      max-width: 364px;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(240, 240, 238, 0.26);
+      border-radius: 1px;
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+    &::after {
+      top: 20px;
+      width: 40px;
+      height: 40px;
+      background-image: url(/wp-content/themes/implant-center/img/teeth.png);
+      background-color: #7D7B79;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      z-index: 2;
+    }
+  }
+
+}
+
+.input-submit-wrapper {
+  position: relative;
+
+  .wpcf7-spinner {
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    left: 8px;
+  }
+}
+
+.form-section__box {
+
+  #wpcf7-f144-o1 {
+    form {
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+    
+      @media (max-width: 576px) {
+        max-width: 414px;
+        margin: 0 auto;
+        grid-template-columns: 100%;
+      }
+  
+      .input-submit-wrapper {
+        grid-column: 2;
+        display: flex;
+    
+        @media (max-width: 576px) {
+          grid-column: 1;
+        }
+      }
+    
+      p {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          grid-column: 2;
+    
+          @media (max-width: 576px) {
+            grid-column: 1;
+          }
+        }
+    
+        &:nth-of-type(3) {
+          grid-column: 1;
+          grid-row: 1 / span 3;
+          height: 100%;
+    
+          @media (max-width: 576px) {
+            grid-row: initial;
+          }
+    
+          & * {
+            height: 100%;
+          }
+    
+          textarea {
+            margin: 0;
+          }
+        }
+      }
+    
+    }
+  }
+
+  form {
+
+    .wpcf7-not-valid-tip {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  
+    br {
+      display: none;
+    }
+    
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+  
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    &__button {
+      box-shadow: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+      &:hover {
+        box-shadow: 0px 7px 15px 6px rgba(0, 0, 0, 0.25);
+      }
+    }
+  
+    .input-submit-wrapper {
+      grid-column: 2;
+      display: flex;
+  
+      @media (max-width: 576px) {
+        grid-column: 1;
+      }
+    }
+  
+    .wpcf7-spinner {
+      position: absolute;
+    }
+  
+  
+    .wpcf7-form-control-wrap {
+      display: flex;
+    }
+  
+    .input-wrapper {
+      max-width: 372px;
+      width: 100%;
+      height: 44px;
+      background: #FFFFFF;
+      border-radius: 20px;
+      min-width: 274px;
+      display: flex;
+  
+      input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        background: #FFFFFF;
+        border-radius: 20px;
+        font-family: $font-family1;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.3em;
+        color: rgba(52, 49, 49, 0.911);
+        text-indent: 34px;
+  
+        &::placeholder {
+          font-family: $font-family1;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.3em;
+          color: rgba(52, 49, 49, 0.46656);
+        }
+      }
+    }
+  }
+
+
+}
+

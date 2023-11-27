@@ -1,0 +1,11 @@
+.services-second {
+  padding: 74px 0 50px;
+  background-color:#E5E5E5;
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px Min( 2.639vw,38px);
+  }
+}

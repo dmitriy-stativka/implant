@@ -1,0 +1,104 @@
+.single-doctor {
+
+    &__inner {
+        padding: 40px 0 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+
+    &__title {
+        position: relative;
+    
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        font-family: $font-family1;
+        letter-spacing: 0.3em;
+    
+        background-image: $gradient-text;
+        -webkit-background-clip: text;
+    
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-item {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            // flex-wrap: wrap;
+            flex-shrink: 0;
+            gap: 0 5px;
+
+            &::before {
+                transform: translateY(130%);
+                width: 5px;
+                height: 5px;
+                display: block;
+                border-radius: 50%;
+                background-color: currentColor;
+                content: '';
+            }
+        }
+    }
+
+
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        max-width: 100%;
+        width: 100%;
+
+        .swiper {
+
+            &-container {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            &-wrapper {
+                align-items: center;
+            }
+
+            &-slide {
+                width: fit-content;
+                transition: all .4s;
+                
+
+                &:not(.swiper-slide-active) {
+                    filter: brightness(50%);
+                    transform: scale(.9);
+                }
+
+                &-active {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+}
+
+
