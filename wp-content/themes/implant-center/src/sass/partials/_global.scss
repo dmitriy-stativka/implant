@@ -8,6 +8,7 @@ body {
   color: #000000;
   background-color: #E5E5E5;
   width: 100%;
+  overflow-x: hidden;
 
   &.fixed {
     position: fixed;

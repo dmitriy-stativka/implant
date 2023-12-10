@@ -23,6 +23,8 @@
     max-width: 900px;
 
     grid-gap: 50px;
+
+    margin: 0 auto;
   }
 
   &__title {
@@ -79,7 +81,7 @@
   &__sub-price {
     font-style: normal;
     font-weight: normal;
-    font-size: clamp(14px, 1.333vw, 20px);
+    font-size: clamp(18px, 1.333vw, 20px);
     line-height: 120%;
     font-family: $font-family1;
     color: rgba(39, 39, 39, 0.6);

@@ -1862,7 +1862,7 @@
   }
 
   .services-single-first__title {
-    margin-bottom: 27px;
+    //margin-bottom: 27px;
     font-size: Min(4.375vw,24px);
     padding-left: 34px;
   }
@@ -2231,10 +2231,10 @@
 
   // ------------- modal -------------
 
-  .modals-wrapper {
-    padding: 50px 0;
-    overflow-y: scroll;
-  }
+  //.modals-wrapper {
+  //  padding: 50px 0;
+  //  overflow-y: scroll;
+  //}
 
   .modal {
     height: fit-content;

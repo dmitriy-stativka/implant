@@ -93,7 +93,7 @@
 }
 
 .form-section__box {
-
+  #wpcf7-f349-o1,
   #wpcf7-f144-o1 {
     form {
 
@@ -157,49 +157,59 @@
       bottom: 0;
       right: 0;
     }
-  
+
     br {
       display: none;
     }
-    
+
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: flex-start;
     justify-content: space-between;
     margin: 0;
-  
+
     @media (max-width: 768px) {
       flex-wrap: wrap;
       justify-content: center;
     }
-  
+
     &__button {
       box-shadow: none;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
+
       &:hover {
         box-shadow: 0px 7px 15px 6px rgba(0, 0, 0, 0.25);
       }
     }
-  
+
     .input-submit-wrapper {
       grid-column: 2;
       display: flex;
-  
+
       @media (max-width: 576px) {
         grid-column: 1;
       }
     }
-  
+
     .wpcf7-spinner {
       position: absolute;
     }
-  
-  
+
+
     .wpcf7-form-control-wrap {
       display: flex;
+      width: 100%;
+      position: relative;
+
+      .wpcf7-not-valid-tip {
+        position: absolute;
+        left: 34px;
+        font-size: 14px;
+        bottom: 2px;
+      }
     }
-  
+
     .input-wrapper {
       max-width: 372px;
       width: 100%;
@@ -208,7 +218,7 @@
       border-radius: 20px;
       min-width: 274px;
       display: flex;
-  
+
       input {
         height: 100%;
         width: 100%;
@@ -223,7 +233,7 @@
         letter-spacing: 0.3em;
         color: rgba(52, 49, 49, 0.911);
         text-indent: 34px;
-  
+
         &::placeholder {
           font-family: $font-family1;
           font-style: normal;
@@ -238,5 +248,23 @@
   }
 
 
+
+
+}
+
+.modal .wpcf7-response-output {
+  margin-top: 20px !important;
+}
+
+.wpcf7-response-output {
+  margin: 0 !important;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  flex-grow: 1;
+  //bottom: 0;
+  //position: absolute;
+  //transform: translateY(calc(100% + 5px));
 }
 
